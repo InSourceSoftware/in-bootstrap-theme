@@ -3261,7 +3261,7 @@ a.btn.disabled, .pager li > a.disabled, .pagination > li > a.disabled, fieldset[
 
 .btn-xs, .btn-group-xs > .btn, .pager li.btn-group-xs > a,
 .pager li.btn-group-xs > span, .pagination > li.btn-group-xs > a,
-.pagination > li.btn-group-xs > span, .navbar-form .form-group + button {
+.pagination > li.btn-group-xs > span {
   padding: 8px 20px;
   font-size: 14px;
   line-height: 1.5;
@@ -4297,7 +4297,7 @@ tbody.collapse.in {
     margin-bottom: 18.5px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .pager li.btn-group-xs > a.navbar-btn,
   .pager li.btn-group-xs > span.navbar-btn, .pagination > li.btn-group-xs > a.navbar-btn,
-  .pagination > li.btn-group-xs > span.navbar-btn, .navbar-form .form-group + button.navbar-btn {
+  .pagination > li.btn-group-xs > span.navbar-btn {
     margin-top: 32px;
     margin-bottom: 32px; }
 
@@ -4645,7 +4645,7 @@ a.label:hover, a.label:focus {
     top: -1px; }
   .btn-xs .badge, .btn-group-xs > .btn .badge, .pager li.btn-group-xs > a .badge,
   .pager li.btn-group-xs > span .badge, .pagination > li.btn-group-xs > a .badge,
-  .pagination > li.btn-group-xs > span .badge, .navbar-form .form-group + button .badge, .btn-group-xs > .btn .badge, .pager li.btn-group-xs > a .badge,
+  .pagination > li.btn-group-xs > span .badge, .btn-group-xs > .btn .badge, .pager li.btn-group-xs > a .badge,
   .pager li.btn-group-xs > span .badge, .pagination > li.btn-group-xs > a .badge,
   .pagination > li.btn-group-xs > span .badge {
     top: 0;
@@ -6317,10 +6317,10 @@ ul.marked-list {
   background-image: none;
   border: 3px solid #cccccc;
   white-space: nowrap;
-  padding: 18px 56px;
-  font-size: 17px;
+  padding: 13px 41px;
+  font-size: 15px;
   line-height: 24px;
-  border-radius: 0px;
+  border-radius: 4px;
   transition: .2s all ease; }
   .btn:focus, .pager li > a:focus,
   .pager li > span:focus, .pagination > li > a:focus,
@@ -6737,22 +6737,6 @@ ul.marked-list {
     .lt-ie9 fieldset[disabled] .pagination > li > span {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.65)";
       filter: alpha(opacity=65); }
-  .btn.round, .pager li > a.round,
-  .pager li > span.round, .pagination > li > a.round,
-  .pagination > li > span.round {
-    border-radius: 50%; }
-  .btn.round-large, .pager li > a.round-large,
-  .pager li > span.round-large, .pagination > li > a.round-large,
-  .pagination > li > span.round-large {
-    border-radius: 14px; }
-  .btn.round-small, .pager li > a.round-small,
-  .pager li > span.round-small, .pagination > li > a.round-small,
-  .pagination > li > span.round-small {
-    border-radius: 4px; }
-  .btn.round-xl, .navbar-form .form-group + button.btn, .pager li > a.round-xl,
-  .pager li > span.round-xl, .pagination > li > a.round-xl,
-  .pagination > li > span.round-xl {
-    border-radius: 40px; }
   .btn.btn-icon-left span.icon, .pager li > a.btn-icon-left span.icon,
   .pager li > span.btn-icon-left span.icon, .pagination > li > a.btn-icon-left span.icon,
   .pagination > li > span.btn-icon-left span.icon {
@@ -6762,7 +6746,7 @@ ul.marked-list {
     bottom: -2px; }
   .btn.btn-icon-left.btn-xs span.icon, .btn-group-xs > .btn.btn-icon-left span.icon, .pager li.btn-group-xs > a.btn-icon-left span.icon,
   .pager li.btn-group-xs > span.btn-icon-left span.icon, .pagination > li.btn-group-xs > a.btn-icon-left span.icon,
-  .pagination > li.btn-group-xs > span.btn-icon-left span.icon, .navbar-form .form-group + button.btn.btn-icon-left span.icon, .pager li > a.btn-icon-left.btn-xs span.icon,
+  .pagination > li.btn-group-xs > span.btn-icon-left span.icon, .pager li > a.btn-icon-left.btn-xs span.icon,
   .pager li > span.btn-icon-left.btn-xs span.icon, .pagination > li > a.btn-icon-left.btn-xs span.icon,
   .pagination > li > span.btn-icon-left.btn-xs span.icon {
     margin-right: 10px; }
@@ -6775,7 +6759,7 @@ ul.marked-list {
     bottom: -2px; }
   .btn.btn-icon-right.btn-xs span.icon, .btn-group-xs > .btn.btn-icon-right span.icon, .pager li.btn-group-xs > a.btn-icon-right span.icon,
   .pager li.btn-group-xs > span.btn-icon-right span.icon, .pagination > li.btn-group-xs > a.btn-icon-right span.icon,
-  .pagination > li.btn-group-xs > span.btn-icon-right span.icon, .navbar-form .form-group + button.btn.btn-icon-right span.icon, .pager li > a.btn-icon-right.btn-xs span.icon,
+  .pagination > li.btn-group-xs > span.btn-icon-right span.icon, .pager li > a.btn-icon-right.btn-xs span.icon,
   .pager li > span.btn-icon-right.btn-xs span.icon, .pagination > li > a.btn-icon-right.btn-xs span.icon,
   .pagination > li > span.btn-icon-right.btn-xs span.icon {
     margin-left: 10px; }
@@ -6841,22 +6825,22 @@ ul.marked-list {
       font-size: 28px; }
   .btn.btn-icon-right.btn-xs, .btn-group-xs > .btn.btn-icon-right, .pager li.btn-group-xs > a.btn-icon-right,
   .pager li.btn-group-xs > span.btn-icon-right, .pagination > li.btn-group-xs > a.btn-icon-right,
-  .pagination > li.btn-group-xs > span.btn-icon-right, .navbar-form .form-group + button.btn.btn-icon-right, .pager li > a.btn-icon-right.btn-xs,
+  .pagination > li.btn-group-xs > span.btn-icon-right, .pager li > a.btn-icon-right.btn-xs,
   .pager li > span.btn-icon-right.btn-xs, .pagination > li > a.btn-icon-right.btn-xs,
   .pagination > li > span.btn-icon-right.btn-xs, .btn.btn-icon-left.btn-xs, .btn-group-xs > .btn.btn-icon-left, .pager li.btn-group-xs > a.btn-icon-left,
   .pager li.btn-group-xs > span.btn-icon-left, .pagination > li.btn-group-xs > a.btn-icon-left,
-  .pagination > li.btn-group-xs > span.btn-icon-left, .navbar-form .form-group + button.btn.btn-icon-left, .pager li > a.btn-icon-left.btn-xs,
+  .pagination > li.btn-group-xs > span.btn-icon-left, .pager li > a.btn-icon-left.btn-xs,
   .pager li > span.btn-icon-left.btn-xs, .pagination > li > a.btn-icon-left.btn-xs,
   .pagination > li > span.btn-icon-left.btn-xs {
     padding-left: 18px;
     padding-right: 18px; }
     .btn.btn-icon-right.btn-xs span.icon, .btn-group-xs > .btn.btn-icon-right span.icon, .pager li.btn-group-xs > a.btn-icon-right span.icon,
     .pager li.btn-group-xs > span.btn-icon-right span.icon, .pagination > li.btn-group-xs > a.btn-icon-right span.icon,
-    .pagination > li.btn-group-xs > span.btn-icon-right span.icon, .navbar-form .form-group + button.btn.btn-icon-right span.icon, .pager li > a.btn-icon-right.btn-xs span.icon,
+    .pagination > li.btn-group-xs > span.btn-icon-right span.icon, .pager li > a.btn-icon-right.btn-xs span.icon,
     .pager li > span.btn-icon-right.btn-xs span.icon, .pagination > li > a.btn-icon-right.btn-xs span.icon,
     .pagination > li > span.btn-icon-right.btn-xs span.icon, .btn.btn-icon-left.btn-xs span.icon, .btn-group-xs > .btn.btn-icon-left span.icon, .pager li.btn-group-xs > a.btn-icon-left span.icon,
     .pager li.btn-group-xs > span.btn-icon-left span.icon, .pagination > li.btn-group-xs > a.btn-icon-left span.icon,
-    .pagination > li.btn-group-xs > span.btn-icon-left span.icon, .navbar-form .form-group + button.btn.btn-icon-left span.icon, .pager li > a.btn-icon-left.btn-xs span.icon,
+    .pagination > li.btn-group-xs > span.btn-icon-left span.icon, .pager li > a.btn-icon-left.btn-xs span.icon,
     .pager li > span.btn-icon-left.btn-xs span.icon, .pagination > li > a.btn-icon-left.btn-xs span.icon,
     .pagination > li > span.btn-icon-left.btn-xs span.icon {
       font-size: 21px; }
@@ -7531,28 +7515,55 @@ ul.marked-list {
     color: #b8b8b6;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .pager li.btn-group-lg > a,
-.pager li.btn-group-lg > span, .pagination > li.btn-group-lg > a,
-.pagination > li.btn-group-lg > span {
+.btn-xl {
   padding: 26px 73px;
   font-size: 18px;
   line-height: 24px;
-  border-radius: 0px; }
+  border-radius: 4px; }
+
+.btn-lg, .btn-group-lg > .btn, .pager li.btn-group-lg > a,
+.pager li.btn-group-lg > span, .pagination > li.btn-group-lg > a,
+.pagination > li.btn-group-lg > span {
+  padding: 18px 56px;
+  font-size: 17px;
+  line-height: 24px;
+  border-radius: 4px; }
+
+.btn-md {
+  padding: 13px 41px;
+  font-size: 15px;
+  line-height: 24px;
+  border-radius: 4px; }
 
 .btn-sm, .btn-group-sm > .btn, .pager li.btn-group-sm > a,
 .pager li.btn-group-sm > span, .pagination > li.btn-group-sm > a,
 .pagination > li.btn-group-sm > span {
-  padding: 13px 41px;
-  font-size: 15px;
-  line-height: 24px;
-  border-radius: 0px; }
-
-.btn-xs, .btn-group-xs > .btn, .pager li.btn-group-xs > a,
-.pager li.btn-group-xs > span, .pagination > li.btn-group-xs > a,
-.pagination > li.btn-group-xs > span, .navbar-form .form-group + button {
   padding: 8px 20px;
   font-size: 12px;
   line-height: 24px;
+  border-radius: 4px; }
+
+.btn-xs, .btn-group-xs > .btn, .pager li.btn-group-xs > a,
+.pager li.btn-group-xs > span, .pagination > li.btn-group-xs > a,
+.pagination > li.btn-group-xs > span {
+  padding: 4px 10px;
+  font-size: 11px;
+  line-height: 24px;
+  border-radius: 4px; }
+
+.btn-round {
+  border-radius: 50%; }
+
+.btn-round-sm {
+  border-radius: 4px; }
+
+.btn-round-lg {
+  border-radius: 14px; }
+
+.btn-round-xl, .navbar-form .form-group + button {
+  border-radius: 40px; }
+
+.btn-square {
   border-radius: 0px; }
 
 .dropdown-menu {
@@ -7569,7 +7580,9 @@ ul.marked-list {
 .pager li.input-group-btn > span, .pagination > li.input-group-btn > a,
 .pagination > li.input-group-btn > span {
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px; }
 
 @media (max-width: 1199px) {
   .form-horizontal .control-label {
@@ -7596,7 +7609,6 @@ input[type="checkbox"] {
     width: 15px;
     height: 15px;
     top: 50%;
-    margin-top: -8px;
     left: 0;
     border-radius: 4px;
     background: #ebebeb; }
@@ -7634,7 +7646,6 @@ input[type="radio"] {
     width: 15px;
     height: 15px;
     top: 50%;
-    margin-top: -8px;
     left: 0;
     border-radius: 50%;
     background: #ebebeb;
@@ -7648,8 +7659,8 @@ input[type="radio"] {
       height: 15px;
       background: #f68522;
       border-radius: 50%;
-      top: 0px;
-      left: 0px;
+      top: 0;
+      left: 0;
       border: 3px solid #fff;
       transition: .3s; }
   .radio label:hover .radio-field:after {
@@ -7707,10 +7718,6 @@ textarea.form-control {
   margin-bottom: 20px; }
   .form-group + button {
     margin-top: 50px; }
-
-button.btn-xs[type="submit"], .btn-group-xs > button[type="submit"].btn, .navbar-form .form-group + button[type="submit"] {
-  font-size: 15px;
-  line-height: 27px; }
 
 .jumbotron {
   padding-top: 30px;
