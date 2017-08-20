@@ -1,0 +1,25 @@
+{
+  "name": "in-bootstrap-theme",
+  "version": "1.0.0",
+  "description": "Bootstrap theme for insource.io properties.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd ../construction && jekyll build",
+    "package": "cd css/ && cp ../../construction/_site/css/bootstrap.css . && git add . && git commit -m 'Updated stylesheet' && git push origin master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/InSourceSoftware/in-bootstrap-theme.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "theme"
+  ],
+  "author": "Stephen Riesenberg",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/InSourceSoftware/in-bootstrap-theme/issues"
+  },
+  "homepage": "https://github.com/InSourceSoftware/in-bootstrap-theme#readme"
+}
