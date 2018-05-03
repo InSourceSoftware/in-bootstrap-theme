@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "cd ../construction && jekyll build",
-    "dist": "cd css/ && cp ../../construction/_site/css/bootstrap.css . && git add . && git commit -m 'Updated stylesheet' && git push origin master",
+    "dist": "cd css/ && cp ../../construction/_site/css/*.css .",
+    "commit": "git add . && git commit -m 'Updated stylesheet'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -3535,10 +3535,10 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   height: 49px;
-  padding: 13px 41px;
+  padding: 9px 25px;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 4px; }
+  border-radius: 20px; }
 
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
@@ -3557,10 +3557,10 @@ select[multiple].input-sm,
 
 .form-group-sm .form-control {
   height: 49px;
-  padding: 13px 41px;
+  padding: 9px 25px 12px;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 4px; }
+  border-radius: 20px; }
 .form-group-sm select.form-control {
   height: 49px;
   line-height: 49px; }
@@ -3570,7 +3570,7 @@ select[multiple].input-sm,
 .form-group-sm .form-control-static {
   height: 49px;
   min-height: 39px;
-  padding: 14px 41px;
+  padding: 10px 25px;
   font-size: 14px;
   line-height: 1.5; }
 
@@ -3578,7 +3578,7 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   height: 78px;
-  padding: 26px 73px;
+  padding: 9px 25px;
   font-size: 18px;
   line-height: 1.33333;
   border-radius: 30px; }
@@ -3600,7 +3600,7 @@ select[multiple].input-lg,
 
 .form-group-lg .form-control {
   height: 78px;
-  padding: 26px 73px;
+  padding: 9px 25px 12px;
   font-size: 18px;
   line-height: 1.33333;
   border-radius: 30px; }
@@ -3613,7 +3613,7 @@ select[multiple].input-lg,
 .form-group-lg .form-control-static {
   height: 78px;
   min-height: 43px;
-  padding: 27px 73px;
+  padding: 10px 25px;
   font-size: 18px;
   line-height: 1.33333; }
 
@@ -4891,13 +4891,13 @@ tbody.collapse.in {
   text-align: center;
   background-color: #f5f5f5;
   border: 1px solid #f2f2f2;
-  border-radius: 0px; }
+  border-radius: 30px; }
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
     padding: 13px 41px;
     font-size: 14px;
-    border-radius: 4px; }
+    border-radius: 20px; }
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
