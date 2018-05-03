@@ -1,0 +1,15 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+
+// The dropdown menu (ul)
+.dropdown-menu {
+  border: 0;
+  @include box-shadow(0 0 0 rgba(0, 0, 0, .12), 3px 4px 8px 0px rgba(0, 0, 0, 0.11));
+
+  // Links within the dropdown menu
+  > li > a {
+    padding: 6px 15px;
+  }
+}

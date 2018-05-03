@@ -1,0 +1,26 @@
+@import "bootstrap/variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "font-awesome";
+@import "material-icons";
+
+@import "bootstrap/includes/mixins";
+@import "bootstrap/mixins/buttons";
+@import "bootstrap/mixins/forms";
+
+// included first, so other styles override
+@import "bootstrap/typography";
+
+@import "bootstrap/badges";
+@import "bootstrap/button-groups";
+@import "bootstrap/buttons";
+@import "bootstrap/dropdowns";
+@import "bootstrap/input-groups";
+@import "bootstrap/forms";
+@import "bootstrap/jumbotron";
+@import "bootstrap/navbar";
+@import "bootstrap/navs";
+@import "bootstrap/pager";
+@import "bootstrap/pagination";
+@import "bootstrap/progress-bars";
+@import "bootstrap/wells";

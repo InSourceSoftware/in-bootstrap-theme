@@ -1,0 +1,37 @@
+ol {
+  margin: 25px 0 0 25px;
+  padding: 0;
+  > li {
+    padding: 0 0 0 5px;
+
+    & + li {
+      margin-top: 12px;
+    }
+  }
+}
+
+ul.marked-list {
+  margin: 25px 0 0;
+  padding: 0;
+  > li {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 30px;
+    list-style: none;
+
+    & + li {
+      margin-top: 12px;
+    }
+
+    &:before {
+      content: "\e258";
+      font-family: "Glyphicons Halflings";
+      font-size: 9px;
+      font-weight: 400;
+      color: $brand-primary;
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  padding-top:    $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+
+  h1,
+  .h1 {
+    margin-bottom: 30px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    small {
+      color: $jumbotron-color;
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      letter-spacing: .06em;
+      font-weight: 700;
+      @media (min-width: $screen-sm-min) {
+        font-size: 21px;
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: 35px;
+    }
+    @media (min-width: $screen-md-max) {
+      font-size: $jumbotron-heading-font-size;
+      small {
+        font-size: 21px;
+      }
+    }
+  }
+
+  p.big {
+    margin-bottom: ($jumbotron-padding / 2);
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    display: none;
+    @media (min-width: $screen-sm-min) {
+      font-size: 18px;
+      display: block;
+    }
+    @media (min-width: $screen-md-max) {
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+
+  .btn {
+    &.btn-sm {
+      padding: 12px 26px;
+    }
+    &.btn-default{
+      color:$white-clr;
+
+    }
+  }
+
+  * + .btn-group-variant {
+    margin-top: 30px;
+    @media (min-width: $screen-md-min) {
+      margin-top: 60px;
+    }
+  }
+
+  .btn + .btn {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .btn {
+      display: block;
+      width: 100%;
+      font-size: 12px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      & + .btn {
+        margin-top: 20px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .container &,
+  .container-fluid & {
+    border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+
+  .btn {
+    display: inline-block;
+    border: 2px solid transparent;
+    font-size: 15px;
+    &-default {
+      border-color: rgba(#fff, .3);
+      &:hover {
+        border-color: 2px solid $brand-primary;
+      }
+    }
+  }
+  .btn-sm {
+    @media (min-width: $screen-lg-min) {
+      min-width: 207px;
+    }
+  }
+  .no-offset {
+    margin-top: 0;
+    * + & {
+      margin-top: 0;
+    }
+  }
+
+  &.offset-large {
+    margin-top: 200px;
+  }
+}

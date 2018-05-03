@@ -1,0 +1,104 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  > li {
+    > a {
+      color: $gray-darker;
+      &:hover,
+      &:focus {
+        background-color: $nav-link-hover-bg;
+        color: $white-clr;
+      }
+    }
+  }
+}
+
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: 0;
+  margin-top: 17px;
+  > li {
+    float: none;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+    padding: 4px;
+    @media (min-width: $screen-xs-min) {
+      display: inline-block;
+    }
+    @media (min-width: $screen-xs) {
+      display: inline-block;
+    }
+    @media (min-width: $screen-sm) {
+      padding: 0;
+    }
+
+    & + li {
+      @media (min-width: $screen-xs) {
+        margin-left: 5px;
+      }
+    }
+
+    // Actual tabs (as links)
+    > a {
+      font-weight: 700;
+      color: $gray-base;
+      @media (max-width: 479px) {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+      text-transform: uppercase;
+      margin-right: 2px;
+      line-height: $line-height-base;
+      border: 2px solid $nav-tabs-border-color;
+      border-radius: $border-radius-xl $border-radius-xl;
+      &:hover {
+        border-color: $nav-tabs-link-hover-border-color;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border: 2px solid $nav-tabs-active-link-hover-border-color;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &.vertical-tabs {
+    @media (min-width: $screen-sm) {
+      > li {
+        display: block;
+        & + li {
+          margin-left: 0;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  margin-top: 30px;
+  font-size: 15px;
+  @media (min-width: $screen-sm) {
+    margin-top: 54px;
+  }
+}

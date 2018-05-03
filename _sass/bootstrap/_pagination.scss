@@ -1,0 +1,58 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  > li {
+    > a,
+    > span {
+      margin-left: 10px;
+      @extend .btn;
+      @extend .btn-default;
+      @include button-size($padding-small-vertical, $padding-small-horizontal, 20px, 24px, $border-radius-small);
+      &:hover, &:focus {
+        @extend .btn-default:hover;
+      }
+    }
+    &:first-child,
+    &:last-child {
+      > a,
+      > span {
+        border-radius: $border-radius-small;
+      }
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+      }
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    @extend .btn.active;
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  > li {
+    > a,
+    > span {
+      @include button-size($padding-base-vertical, $padding-base-horizontal, 20px, 24px, $border-radius-small);
+    }
+  }
+}
+
+// Small
+.pagination-sm {
+  > li {
+    > a,
+    > span {
+      @include button-size($padding-xs-vertical, $padding-xs-horizontal, 20px, 24px, $border-radius-small);
+    }
+  }
+}

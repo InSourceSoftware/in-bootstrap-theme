@@ -4,8 +4,8 @@
   "description": "Bootstrap theme for insource.io properties.",
   "main": "index.js",
   "scripts": {
-    "build": "cd ../construction && jekyll build",
-    "dist": "cd css/ && cp ../../construction/_site/css/*.css .",
+    "build": "jekyll build",
+    "dist": "cd css/ && cp ../_site/css/*.css .",
     "commit": "git add . && git commit -m 'Updated stylesheet'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/InSourceSoftware/in-bootstrap-theme/issues"
   },
-  "homepage": "https://github.com/InSourceSoftware/in-bootstrap-theme#readme"
+  "homepage": "https://github.com/InSourceSoftware/in-bootstrap-theme#readme",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
 }

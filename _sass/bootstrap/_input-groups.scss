@@ -1,0 +1,15 @@
+// Text input groups
+// -------------------------
+.input-group-addon {
+  padding: 16px 16px 16px 20px;
+}
+
+// Button input groups
+// -------------------------
+.input-group-btn {
+  > .btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include border-right-radius($btn-border-radius-xl);
+  }
+}

@@ -1,0 +1,243 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: $btn-font-weight;
+  font-family: $font-family-base;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 3px solid $btn-default-border;
+  white-space: nowrap;
+  @include button-size($padding-small-vertical, $padding-small-horizontal, 15px, 24px, $btn-border-radius-small);
+  transition: .2s all ease;
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    @include box-shadow(none);
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  &.btn-icon-left {
+    span.icon {
+      margin-right: 15px;
+      line-height: inherit;
+      position: relative;
+      bottom: -2px;
+    }
+    &.btn-xs {
+      span.icon {
+        margin-right: 10px;
+      }
+    }
+  }
+  &.btn-icon-right {
+    span.icon {
+      margin-left: 15px;
+      line-height: inherit;
+      position: relative;
+      bottom: -2px;
+    }
+    &.btn-xs {
+      span.icon {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &.btn-shadow {
+    box-shadow: 0 9px 21px 0 rgba(#000, .15);
+  }
+
+  &.btn-icon-right,
+  &.btn-icon-left {
+    &.btn {
+      padding-left: 34px;
+      padding-right: 34px;
+      span.icon {
+        font-size: 26px;
+      }
+    }
+    &.btn-sm {
+      padding-left: 28px;
+      padding-right: 28px;
+      span.icon {
+        font-size: 24px;
+        vertical-align: sub;
+
+      }
+    }
+    &.btn-lg {
+      padding-left: 44px;
+      padding-right: 44px;
+      span.icon {
+        font-size: 28px;
+      }
+    }
+    &.btn-xs {
+      padding-left: 18px;
+      padding-right: 18px;
+      span.icon {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Default appears as transparent
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  &:hover, &:focus {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  }
+}
+
+// Primary appears as dark orange
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  &:hover, &:focus {
+    @include button-variant($brand-primary, $btn-default-bg, $brand-primary);
+  }
+}
+
+// Success appears as green
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+  &:hover, &:focus {
+    @include button-variant($brand-success, $btn-default-bg, $brand-success);
+  }
+}
+
+// Info appears as blue-green
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  &:hover, &:focus {
+    @include button-variant($brand-info, $btn-default-bg, $brand-info);
+  }
+}
+
+
+// Warning appears as orange
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+  &:hover, &:focus {
+    @include button-variant($brand-warning, $btn-default-bg, $brand-warning);
+  }
+}
+
+// Danger and error appear as red
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+  &:hover, &:focus {
+    @include button-variant($brand-danger, $btn-default-bg, $brand-danger);
+  }
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  position: relative;
+  color: $brand-primary;
+  font-weight: normal;
+  border-radius: 0;
+  font-size: 14px;
+  font-family: $font-family-base;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: 0.08em;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover {
+    color: $gray-light;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xl {
+  @include button-size($padding-large-vertical, $padding-large-horizontal, 18px, 24px, $btn-border-radius-small);
+}
+.btn-lg {
+  @include button-size($padding-base-vertical, $padding-base-horizontal, 17px, 24px, $btn-border-radius-small);
+}
+.btn-md {
+  @include button-size($padding-small-vertical, $padding-small-horizontal, 15px, 24px, $btn-border-radius-small);
+}
+.btn-sm {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, 12px, 24px, $btn-border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical / 2, $padding-xs-horizontal / 2, 11px, 24px, $btn-border-radius-small);
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-round {
+  border-radius: 50%;
+}
+.btn-round-sm {
+  border-radius: $btn-border-radius-small;
+}
+.btn-round-lg {
+  border-radius: $btn-border-radius-large;
+}
+.btn-round-xl {
+  border-radius: $btn-border-radius-xl;
+}
+.btn-square {
+  border-radius: $btn-border-radius-base;
+}

@@ -1,0 +1,249 @@
+//
+// Forms
+// --------------------------------------------------
+
+@media (max-width: $screen-md-max) {
+  .form-horizontal .control-label {
+    padding-left: 38px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .form-horizontal .control-label {
+    padding-top: 14px;
+  }
+}
+
+form > .form-control > .control-label, label {
+  padding-left: 19px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #cbcbc9;
+}
+
+// Custom Checkbox styling
+
+input[type="checkbox"] {
+  //visibility: hidden;
+  opacity: 0;
+}
+
+.checkbox {
+  position: relative;
+  label {
+    .checkbox-field {
+      cursor: pointer;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 0;
+      border-radius: 4px;
+      background: #ebebeb;
+      &:after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 5px;
+        background: transparent;
+        top: 4px;
+        left: 4px;
+        border: 2px solid $brand-primary;
+        border-top: none;
+        border-right: none;
+        @include transform(rotate(-45deg));
+        transition: .3s;
+      }
+    }
+    &:hover .checkbox-field:after {
+      opacity: 0.3;
+    }
+    input[type="checkbox"] {
+      &:focus + .checkbox-field:after {
+        opacity: 0.3;
+        color: $gray-lighter;
+      }
+      &:focus:checked + .checkbox-field:after {
+        opacity: 0.6;
+      }
+      &:checked + .checkbox-field:after {
+        opacity: 1;
+      }
+    }
+    span.font-secondary {
+      margin-left: 8px;
+    }
+  }
+}
+
+// Custom Radiobox styling
+
+input[type="radio"] {
+  //visibility: hidden;
+  opacity: 0;
+}
+
+.radio {
+  position: relative;
+  label {
+    .radio-field {
+      cursor: pointer;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 0;
+      border-radius: 50%;
+      background: #ebebeb;
+      @include box-shadow(inset 0px 2px 2px 0px rgba(#000, 0.16));
+      &:after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: $brand-primary;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        border: 3px solid $white-clr;
+        transition: .3s;
+      }
+    }
+    &:hover .radio-field:after {
+      opacity: 0.3;
+    }
+    input[type="radio"] {
+      &:focus + .radio-field:after {
+        opacity: 0.3;
+        color: $gray-lighter;
+      }
+      &:focus:checked + .radio-field:after {
+        opacity: 0.6;
+      }
+      &:checked + .radio-field:after {
+        opacity: 1;
+      }
+    }
+    span.font-secondary {
+      margin-left: 8px;
+    }
+  }
+}
+
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: 9px 25px 12px;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: #34495e;
+  font-weight: 400;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 0;
+  border-radius: $input-border-radius-large; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  @include box-shadow(none);
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus;
+
+  // Placeholder
+  @include placeholder;
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    border: 0;
+    background-color: transparent;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: $input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+  }
+
+  // [converter] extracted textarea& to textarea.form-control
+}
+
+@include input-size('.input-sm', $input-height-small, 9px, 25px, $font-size-small, $line-height-small, $input-border-radius-small);
+.form-group-sm {
+  .form-control {
+    padding: 9px 25px 12px;
+  }
+  .form-control-static {
+    padding: 10px 25px;
+  }
+}
+
+@include input-size('.input-lg', $input-height-large, 9px, 25px, $font-size-large, $line-height-large, $input-border-radius-large);
+.form-group-lg {
+  .form-control {
+    padding: 9px 25px 12px;
+  }
+  .form-control-static {
+    padding: 10px 25px;
+  }
+}
+
+// Reset height for `textarea`s
+textarea.form-control {
+  height: 100px;
+  resize: none
+}
+
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+  margin-bottom: $form-group-margin-bottom;
+  & + button {
+    margin-top: 50px;
+  }
+}
+
+//button.btn-xs[type="submit"] {
+//  font-size: 15px;
+//  line-height: 27px;
+//}

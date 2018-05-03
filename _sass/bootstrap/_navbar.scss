@@ -1,0 +1,18 @@
+//
+// Navbars
+// --------------------------------------------------
+
+
+// Navbar form
+//
+// Extension of the `.form-inline` with some extra flavor for optimum display in
+// our navbars.
+
+.navbar-form {
+  .form-group {
+    & + button {
+      @extend .btn-round-xl;
+      margin: 0;
+    }
+  }
+}

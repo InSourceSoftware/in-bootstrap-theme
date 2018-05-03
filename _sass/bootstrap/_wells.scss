@@ -1,0 +1,87 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+  padding: 55px 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  @include box-shadow(none);
+  &.well-min {
+    padding-top: 55px;
+    @media (min-width: $screen-sm-min) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// Sizes
+.well-lg {
+  @media (min-width: 768px) {
+    padding: 120px 0;
+  }
+}
+.well-sm {
+  @media (min-width: 768px) {
+    padding: 75px 0 90px;
+  }
+}
+
+.well-xl {
+  padding: 100px 0;
+  @media (min-width: 768px) {
+    padding: 240px 0;
+  }
+}
+
+.well-inset {
+  padding-top: 20px;
+}
+
+.well-parallax {
+  padding-bottom: 120px;
+  height: 100vh;
+  padding-top: 120px;
+  @media (min-width: $screen-xs-min) {
+    padding-top: 34px;
+  }
+  @media (min-width: $screen-sm-min) {
+    padding-top: 120px;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  &.jumbotron {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+    @media (max-width: $screen-xs-max) {
+      .btn {
+        display: block;
+      }
+    }
+  }
+  &:before {
+    content: '';
+    height: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    @media (min-width: $screen-lg-min) {
+      height: 20%;
+    }
+    @media (max-height: 750px) {
+      height: 15%;
+    }
+    @media (max-width: $screen-xs-max) {
+      @media (max-height: 780px) {
+        height: 5%;
+      }
+    }
+  }
+}

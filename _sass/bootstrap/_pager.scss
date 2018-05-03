@@ -1,0 +1,18 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  li {
+    > a,
+    > span {
+      @extend .btn;
+      @extend .btn-default;
+      @include button-size($padding-xs-vertical, $padding-xs-horizontal, 15px, 24px, $border-radius-small);
+      &:hover, &:focus {
+        @extend .btn-default:hover;
+      }
+    }
+  }
+}

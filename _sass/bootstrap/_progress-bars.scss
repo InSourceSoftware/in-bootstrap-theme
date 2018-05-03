@@ -1,0 +1,54 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  position: relative;
+  width: 90%;
+  margin-right: 9%;
+  height: 10px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+
+  span {
+    position: absolute;
+    top: -6px;
+    left: calc(100% + 10px);
+    &:after {
+      content: '%';
+    }
+  }
+}
+
+// Bar of progress
+.progress-bar {
+  border-radius: $progress-border-radius;
+  background-color: $brand-primary;
+  @include box-shadow(none);
+  @include transition(width 1s ease);
+}
+
+
+// Variations
+// -------------------------
+
+.progress-bar-success {
+  @include progress-bar-variant($progress-bar-success-bg);
+}
+
+.progress-bar-info {
+  @include progress-bar-variant($progress-bar-info-bg);
+}
+
+.progress-bar-warning {
+  @include progress-bar-variant($progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+  @include progress-bar-variant($progress-bar-danger-bg);
+}
