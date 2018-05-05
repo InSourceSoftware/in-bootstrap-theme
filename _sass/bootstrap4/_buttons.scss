@@ -1,0 +1,34 @@
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xl {
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
+}
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-round-sm {
+  border-radius: .25rem;
+}
+.btn-round-lg {
+  border-radius: .75rem;
+}
+.btn-round-xl {
+  border-radius: 50%;
+}
+.btn-square {
+  border-radius: 0;
+}
+
+
+// Button Styles
+// --------------------------------------------------
+
+.btn-shadow {
+  box-shadow: 0 9px 21px 0 rgba(0, 0, 0, .15);
+}
