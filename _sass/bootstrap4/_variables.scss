@@ -63,7 +63,7 @@ $colors: map-merge((
 ), $colors);
 
 $primary:       #f68522;
-$secondary:     #888a8c;
+$secondary:     #b8b8b6;
 $success:       #00b06c;
 $info:          #547abb;
 $warning:       #ff6949;
@@ -210,7 +210,7 @@ $line-height-xs:              1.5;
 $border-width:                1px;
 $border-color:                $gray-300;
 
-$border-radius:               3rem;
+$border-radius:               2rem;
 $border-radius-xl:            $border-radius;
 $border-radius-lg:            $border-radius;
 $border-radius-sm:            $border-radius;

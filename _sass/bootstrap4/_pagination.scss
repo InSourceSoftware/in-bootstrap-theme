@@ -1,0 +1,52 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  > .page-item {
+    > .page-link {
+      margin-left: 10px;
+      @extend .btn;
+      @extend .btn-round-sm;
+      @include button-outline-variant(theme-color("secondary"));
+    }
+    &:first-child {
+      .page-link {
+        margin-left: 0;
+        @extend .btn-round-sm;
+      }
+    }
+    &:last-child {
+      .page-link {
+        @extend .btn-round-sm;
+      }
+    }
+    &.active .page-link {
+      @extend .btn-primary;
+      pointer-events: none;
+    }
+    &.disabled .page-link {
+      opacity: $btn-disabled-opacity;
+    }
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  > .page-item {
+    > .page-link {
+      @extend .btn-lg;
+    }
+  }
+}
+
+// Small
+.pagination-sm {
+  > .page-item {
+    > .page-link {
+      @extend .btn-sm;
+    }
+  }
+}

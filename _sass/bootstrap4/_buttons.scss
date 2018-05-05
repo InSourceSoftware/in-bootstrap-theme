@@ -1,3 +1,74 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  &.btn-icon-left {
+    span.icon {
+      margin-right: 1rem;
+      line-height: inherit;
+      position: relative;
+      bottom: -2px;
+    }
+    &.btn-xs {
+      span.icon {
+        margin-right: .67rem;
+      }
+    }
+  }
+  &.btn-icon-right {
+    span.icon {
+      margin-left: 1rem;
+      line-height: inherit;
+      position: relative;
+      bottom: -2px;
+    }
+    &.btn-xs {
+      span.icon {
+        margin-left: .67rem;
+      }
+    }
+  }
+
+  &.btn-icon-right,
+  &.btn-icon-left {
+    &.btn {
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+      span.icon {
+        //font-size: 1.75rem;
+      }
+    }
+    &.btn-sm {
+      padding-left: 1.85rem;
+      padding-right: 1.85rem;
+      span.icon {
+        //font-size: 1.6rem;
+        vertical-align: sub;
+
+      }
+    }
+    &.btn-lg {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      span.icon {
+        //font-size: 1.85rem;
+      }
+    }
+    &.btn-xs {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+      span.icon {
+        //font-size: 1.4rem;
+      }
+    }
+  }
+}
+
 // Button Sizes
 // --------------------------------------------------
 
@@ -19,6 +90,9 @@
   border-radius: .75rem;
 }
 .btn-round-xl {
+  border-radius: 2rem;
+}
+.btn-circle {
   border-radius: 50%;
 }
 .btn-square {
@@ -31,4 +105,12 @@
 
 .btn-shadow {
   box-shadow: 0 9px 21px 0 rgba(0, 0, 0, .15);
+}
+
+.btn-default {
+  @include button-outline-variant(theme-color("secondary"), theme-color("primary"), darken(theme-color("primary"), 10%), darken(theme-color("primary"), 10%));
+}
+
+.btn-outline-default {
+  @include button-outline-variant(theme-color("primary"), theme-color("secondary"), darken(theme-color("secondary"), 10%), darken(theme-color("secondary"), 10%));
 }
