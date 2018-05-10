@@ -75,6 +75,9 @@
 .btn-xl {
   @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
 }
+.btn-md {
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+}
 .btn-xs {
   @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
 }
@@ -108,9 +111,10 @@
 }
 
 .btn-default {
-  @include button-outline-variant(theme-color("secondary"), theme-color("primary"), darken(theme-color("primary"), 10%), darken(theme-color("primary"), 10%));
+  //@include button-variant(theme-color("secondary"), theme-color("secondary"), color("white"), theme-color("primary"));
+  @include button-outline-variant(color("gray-dark"), theme-color("secondary"), theme-color("primary"), darken(theme-color("primary"), 10%), darken(theme-color("primary"), 10%));
 }
 
 .btn-outline-default {
-  @include button-outline-variant(theme-color("primary"), theme-color("secondary"), darken(theme-color("secondary"), 10%), darken(theme-color("secondary"), 10%));
+  @include button-outline-variant(color("gray-dark"), theme-color("secondary"), theme-color("primary"), darken(theme-color("secondary"), 10%), darken(theme-color("secondary"), 10%));
 }

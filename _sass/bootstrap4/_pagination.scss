@@ -38,6 +38,7 @@
   > .page-item {
     > .page-link {
       @extend .btn-lg;
+      padding: $pagination-padding-y-lg $pagination-padding-x-lg;
     }
   }
 }
@@ -47,6 +48,21 @@
   > .page-item {
     > .page-link {
       @extend .btn-sm;
+      padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+    }
+  }
+}
+
+// Responsive
+// --------------------------------------------------
+
+@include media-breakpoint-down(md) {
+  .pagination {
+    > .page-item {
+      > .page-link {
+        border-width: 1px;
+        padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+      }
     }
   }
 }

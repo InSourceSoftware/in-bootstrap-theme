@@ -1,0 +1,38 @@
+blockquote {
+  @extend .blockquote;
+  color: color("gray-dark");
+  background: gray("100");
+  padding: 1rem 2rem;
+
+  footer {
+    @extend .blockquote-footer;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  cite {
+    position: relative;
+    padding-left: 4rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 1px;
+      border-bottom: 1px solid #e1e1e1;
+      left: 8px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+ol, ul {
+  padding-left: 1.25rem;
+  li {
+    padding-left: .5rem;
+  }
+}

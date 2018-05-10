@@ -54,11 +54,11 @@
   }
 }
 
-@mixin button-outline-variant($color, $color-hover: $color, $active-background: darken($color, 10%), $active-border: darken($color, 10%)) {
+@mixin button-outline-variant($color, $border: $color, $color-hover: $border, $active-background: darken($color, 10%), $active-border: darken($color, 10%)) {
   color: $color;
   background-color: transparent;
   background-image: none;
-  border-color: $color;
+  border-color: $border;
 
   &:hover {
     color: $white;
