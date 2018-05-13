@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "jekyll build",
-    "dist": "cd css/ && cp ../_site/css/*.css .",
+    "dist": "cp _site/css/*.css docs/css && cp -R fonts docs",
     "commit": "git add . && git commit -m 'Updated stylesheet'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
