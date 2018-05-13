@@ -3,11 +3,11 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($background, $border, $hover-background: $white, $hover-border: $border, $active-background: darken($background, 10%), $active-border: darken($background, 10%)) {
-  color: $hover-background;
+@mixin button-variant($background, $border, $hover-background: transparent, $hover-border: $border, $active-background: darken($background, 10%), $active-border: darken($background, 10%)) {
+  color: $white;
   @include gradient-bg($background);
   border-color: $border;
-  //@include box-shadow($btn-box-shadow);
+  @include box-shadow($btn-box-shadow);
 
   &:hover {
     color: $background;
@@ -21,7 +21,7 @@
     @if $enable-shadows {
       box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
     } @else {
-      //box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+      box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
     }
   }
 
@@ -36,7 +36,7 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: $hover-background;
+    color: $white;
     background-color: $active-background;
     @if $enable-gradients {
       background-image: none; // Remove the gradient for the pressed/active state
@@ -48,7 +48,7 @@
       @if $enable-shadows {
         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
       } @else {
-        //box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+        box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
       }
     }
   }
@@ -68,7 +68,7 @@
 
   &:focus,
   &.focus {
-    //box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
   }
 
   &.disabled,
@@ -89,7 +89,7 @@
       @if $enable-shadows and $btn-active-box-shadow != none {
         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
       } @else {
-        //box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
       }
     }
   }

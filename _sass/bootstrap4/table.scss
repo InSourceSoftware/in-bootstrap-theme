@@ -1,0 +1,24 @@
+table {
+  thead {
+    th {
+      color: $headings-color;
+      text-transform: uppercase;
+    }
+  }
+}
+
+table {
+  .thead-dark {
+    th {
+      color: $table-dark-color;
+    }
+  }
+}
+
+table.table-dark {
+  thead {
+    th {
+      color: $table-dark-color;
+    }
+  }
+}

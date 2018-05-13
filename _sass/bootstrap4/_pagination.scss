@@ -4,24 +4,19 @@
 .pagination {
   > .page-item {
     > .page-link {
-      margin-left: 10px;
-      @extend .btn;
+      font-weight: bold;
       @extend .btn-round-sm;
-      @include button-outline-variant(theme-color("secondary"));
     }
     &:first-child {
+      padding-left: 0;
       .page-link {
-        margin-left: 0;
-        @extend .btn-round-sm;
       }
     }
     &:last-child {
       .page-link {
-        @extend .btn-round-sm;
       }
     }
     &.active .page-link {
-      @extend .btn-primary;
       pointer-events: none;
     }
     &.disabled .page-link {
@@ -37,8 +32,8 @@
 .pagination-lg {
   > .page-item {
     > .page-link {
-      @extend .btn-lg;
-      padding: $pagination-padding-y-lg $pagination-padding-x-lg;
+      //@extend .btn-lg;
+      //padding: $pagination-padding-y-lg $pagination-padding-x-lg;
     }
   }
 }
@@ -47,8 +42,8 @@
 .pagination-sm {
   > .page-item {
     > .page-link {
-      @extend .btn-sm;
-      padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+      //@extend .btn-sm;
+      //padding: $pagination-padding-y-sm $pagination-padding-x-sm;
     }
   }
 }
@@ -60,8 +55,8 @@
   .pagination {
     > .page-item {
       > .page-link {
-        border-width: 1px;
-        padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+        //border-width: 1px;
+        //padding: $pagination-padding-y-sm $pagination-padding-x-sm;
       }
     }
   }

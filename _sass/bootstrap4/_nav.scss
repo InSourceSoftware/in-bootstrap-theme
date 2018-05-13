@@ -1,0 +1,103 @@
+.navbar-nav {
+  .dropdown-menu {
+    min-width: $dropdown-min-width * 1.6;
+  }
+}
+
+// Base class
+//
+
+.nav {
+
+}
+
+.nav-link {
+  color: color("gray");
+
+  &.active {
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  .nav-item {
+  }
+
+  .nav-link {
+    @include hover-focus {
+    }
+
+    &.disabled {
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+  }
+
+  .dropdown-menu {
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+  }
+}
+
+.nav-pills:not(.flex-column) {
+  .nav-link {
+    border: $nav-tabs-border-width solid $nav-tabs-border-color;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    border-color: $nav-tabs-link-active-color;
+  }
+}
+
+.nav-pills.flex-column {
+  .nav-link {
+    margin-bottom: .5rem;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+  }
+}
+
+.nav-justified {
+  .nav-item {
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+  }
+  > .active {
+  }
+}

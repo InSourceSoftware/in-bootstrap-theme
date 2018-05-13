@@ -13,7 +13,7 @@ $white:    #fff;
 $gray-100: #f5f5f5;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
-$gray-400: #ced4da;
+$gray-400: #cbcbc9;
 $gray-500: #adb5bd;
 $gray-600: #888a8c;
 $gray-700: #495057;
@@ -100,7 +100,7 @@ $yiq-text-light:            $white;
 
 $enable-caret:              true;
 $enable-rounded:            true;
-$enable-shadows:            false;
+$enable-shadows:            true;
 $enable-gradients:          false;
 $enable-transitions:        true;
 $enable-hover-media-query:  false; // Deprecated, no longer affects any compiled CSS
@@ -210,7 +210,7 @@ $line-height-xs:              1.5;
 $border-width:                1px;
 $border-color:                $gray-300;
 
-$border-radius:               2rem;
+$border-radius:               .25rem;
 $border-radius-xl:            $border-radius;
 $border-radius-lg:            $border-radius;
 $border-radius-sm:            $border-radius;
@@ -282,10 +282,10 @@ $lead-font-weight:            300;
 
 $small-font-size:             80%;
 
-$text-muted:                  $gray-600;
+$text-muted:                  $gray-300;
 
 $blockquote-small-color:      $gray-800;
-$blockquote-font-size:        $font-size-base;
+$blockquote-font-size:        ($font-size-base * 1.1);
 
 $hr-border-color:             rgba($black, .1);
 $hr-border-width:             $border-width;
@@ -317,7 +317,7 @@ $table-hover-bg:              rgba($black, .075);
 $table-active-bg:             $table-hover-bg;
 
 $table-border-width:          $border-width;
-$table-border-color:          $gray-300;
+$table-border-color:          $gray-200;
 
 $table-head-bg:               $gray-200;
 $table-head-color:            $gray-700;
@@ -326,7 +326,7 @@ $table-dark-bg:               $gray-900;
 $table-dark-accent-bg:        rgba($white, .05);
 $table-dark-hover-bg:         rgba($white, .075);
 $table-dark-border-color:     lighten($gray-900, 7.5%);
-$table-dark-color:            $body-bg;
+$table-dark-color:            $white;
 
 $table-striped-order:         odd;
 
@@ -346,22 +346,22 @@ $input-btn-focus-color:       rgba(0, 0, 0, .17);
 $input-btn-focus-box-shadow:  0 1px 13px $input-btn-focus-color;
 
 $input-btn-padding-y-xs:      .325rem;
-$input-btn-padding-x-xs:      1.25rem;
+$input-btn-padding-x-xs:      .725rem;
 $input-btn-line-height-xs:    $line-height-xs;
 
 $input-btn-padding-y-sm:      .325rem;
-$input-btn-padding-x-sm:      1.25rem;
+$input-btn-padding-x-sm:      1rem;
 $input-btn-line-height-sm:    $line-height-sm;
 
-$input-btn-padding-y-lg:      .525rem;
-$input-btn-padding-x-lg:      1.25rem;
+$input-btn-padding-y-lg:      .725rem;
+$input-btn-padding-x-lg:      1.5rem;
 $input-btn-line-height-lg:    $line-height-lg;
 
-$input-btn-padding-y-xl:      .525rem;
-$input-btn-padding-x-xl:      1.25rem;
+$input-btn-padding-y-xl:      .925rem;
+$input-btn-padding-x-xl:      2.25rem;
 $input-btn-line-height-xl:    $line-height-xl;
 
-$input-btn-border-width:      $border-width;
+$input-btn-border-width:      0px;
 
 
 // Buttons
@@ -389,11 +389,11 @@ $btn-padding-x-xl:            $input-btn-padding-x-xl;
 $btn-line-height-xl:          $input-btn-line-height-xl;
 
 $btn-font-weight:             $font-weight-bold;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+$btn-box-shadow:              0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
 $btn-focus-width:             $input-btn-focus-width;
 $btn-focus-box-shadow:        0 6px 21px rgba(0, 0, 0, .35);
 $btn-disabled-opacity:        .65;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
+$btn-active-box-shadow:       0; // break shadow so accessibility wins
 
 $btn-link-disabled-color:     $gray-400;
 
@@ -429,16 +429,16 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg;
 $input-line-height-lg:                  calc(#{$font-size-lg * $line-height-base} + #{$btn-border-width * 2});
 
 $input-bg:                              $gray-100;
-$input-disabled-bg:                     $gray-300;
+$input-disabled-bg:                     $gray-200;
 
 $input-color:                           $gray-800;
 $input-border-color:                    $primary;
 $input-border-width:                    0px;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075);
 
-$input-border-radius:                   $border-radius;
-$input-border-radius-lg:                $border-radius-lg;
-$input-border-radius-sm:                $border-radius-sm;
+$input-border-radius:                   2rem;
+$input-border-radius-lg:                $input-border-radius;
+$input-border-radius-sm:                $input-border-radius;
 
 $input-focus-bg:                        $white;
 $input-focus-border-color:              lighten($component-active-bg, 25%);
@@ -446,7 +446,7 @@ $input-focus-color:                     $input-color;
 $input-focus-width:                     $input-btn-focus-width;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
-$input-placeholder-color:               $gray-600;
+$input-placeholder-color:               $gray-400;
 $input-plaintext-color:                 $body-color;
 
 $input-height-border:                   $input-border-width * 2;
@@ -510,15 +510,16 @@ $custom-checkbox-indicator-indeterminate-box-shadow:  none;
 $custom-radio-indicator-border-radius:          50%;
 $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23");
 
-$custom-select-padding-y:           .375rem;
-$custom-select-padding-x:           .75rem;
-$custom-select-height:              $input-height;
+$custom-select-padding-y:           $input-btn-padding-y;
+$custom-select-padding-x:           $input-btn-padding-x;
+$custom-select-line-height:         2.0;
+$custom-select-height-inner:        ($font-size-base * $custom-select-line-height) + ($custom-select-padding-y * 2);
+$custom-select-height:              calc(#{$custom-select-height-inner} + #{$input-height-border});
 $custom-select-indicator-padding:   1rem; // Extra padding to account for the presence of the background-image based indicator
-$custom-select-line-height:         $input-btn-line-height;
 $custom-select-color:               $input-color;
 $custom-select-disabled-color:      $gray-600;
 $custom-select-bg:                  $input-bg;
-$custom-select-disabled-bg:         $gray-200;
+$custom-select-disabled-bg:         $gray-600;
 $custom-select-bg-size:             8px 10px; // In pixels because image dimensions
 $custom-select-indicator-color:     $gray-800;
 $custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23");
@@ -527,7 +528,7 @@ $custom-select-border-color:        $input-border-color;
 $custom-select-border-radius:       $border-radius;
 
 $custom-select-focus-border-color:  $input-focus-border-color;
-$custom-select-focus-box-shadow:    inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5);
+$custom-select-focus-box-shadow:    $input-btn-focus-box-shadow;
 
 $custom-select-font-size-sm:        75%;
 $custom-select-height-sm:           $input-height-sm;
@@ -551,21 +552,21 @@ $custom-range-thumb-box-shadow:       0 .1rem .25rem rgba($black, .1);
 $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-btn-focus-box-shadow;
 $custom-range-thumb-active-bg:        lighten($component-active-bg, 35%);
 
-$custom-file-height:                $input-height;
-$custom-file-height-inner:          $input-height-inner;
+$custom-file-padding-y:             $input-btn-padding-y;
+$custom-file-padding-x:             $input-btn-padding-x;
+$custom-file-line-height:           2.0;
+$custom-file-height-inner:          ($font-size-base * $custom-file-line-height) + ($custom-file-padding-y * 2);
+$custom-file-height:                calc(#{$custom-file-height-inner} + #{$input-height-border});
 $custom-file-focus-border-color:    $input-focus-border-color;
 $custom-file-focus-box-shadow:      $input-btn-focus-box-shadow;
 
-$custom-file-padding-y:             $input-btn-padding-y;
-$custom-file-padding-x:             $input-btn-padding-x;
-$custom-file-line-height:           $input-btn-line-height;
-$custom-file-color:                 $input-color;
+$custom-file-color:                 $input-placeholder-color;
 $custom-file-bg:                    $input-bg;
 $custom-file-border-width:          $input-btn-border-width;
 $custom-file-border-color:          $input-border-color;
 $custom-file-border-radius:         $input-border-radius;
 $custom-file-box-shadow:            $input-box-shadow;
-$custom-file-button-color:          $custom-file-color;
+$custom-file-button-color:          $input-color;
 $custom-file-button-bg:             $input-group-addon-bg;
 $custom-file-text: (
   en: "Browse"
@@ -573,7 +574,7 @@ $custom-file-text: (
 
 
 // Form validation
-$form-feedback-margin-top:          $form-text-margin-top;
+$form-feedback-margin-top:          .5rem;
 $form-feedback-font-size:           $small-font-size;
 $form-feedback-valid-color:         $success;
 $form-feedback-invalid-color:       $danger;
@@ -589,13 +590,13 @@ $dropdown-spacer:                   .125rem;
 $dropdown-bg:                       $white;
 $dropdown-border-color:             rgba($black, .15);
 $dropdown-border-radius:            $border-radius;
-$dropdown-border-width:             $border-width;
+$dropdown-border-width:             0px;
 $dropdown-divider-bg:               $gray-200;
-$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175);
+$dropdown-box-shadow:               0 0 0 rgba(0, 0, 0, 0.12), 3px 4px 8px 0px rgba(0, 0, 0, 0.11);
 
 $dropdown-link-color:               $gray-900;
-$dropdown-link-hover-color:         darken($gray-900, 5%);
-$dropdown-link-hover-bg:            $gray-100;
+$dropdown-link-hover-color:         $primary;
+$dropdown-link-hover-bg:            transparent;
 
 $dropdown-link-active-color:        $component-active-color;
 $dropdown-link-active-bg:           $component-active-bg;
@@ -623,19 +624,19 @@ $zindex-tooltip:                    1070;
 
 // Navs
 
-$nav-link-padding-y:                .5rem;
-$nav-link-padding-x:                1rem;
-$nav-link-disabled-color:           $gray-600;
+$nav-link-padding-y:                $btn-padding-y;
+$nav-link-padding-x:                $btn-padding-x;
+$nav-link-disabled-color:           $btn-link-disabled-color;
 
-$nav-tabs-border-color:             $gray-300;
-$nav-tabs-border-width:             $border-width;
+$nav-tabs-border-color:             $secondary;
+$nav-tabs-border-width:             2px;
 $nav-tabs-border-radius:            $border-radius;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color;
-$nav-tabs-link-active-color:        $gray-700;
+$nav-tabs-link-hover-border-color:  $secondary $secondary $nav-tabs-border-color;
+$nav-tabs-link-active-color:        $primary;
 $nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg;
+$nav-tabs-link-active-border-color: $secondary $secondary $nav-tabs-link-active-bg;
 
-$nav-pills-border-radius:           $border-radius;
+$nav-pills-border-radius:           2rem;
 $nav-pills-link-active-color:       $component-active-color;
 $nav-pills-link-active-bg:          $component-active-bg;
 
@@ -676,25 +677,25 @@ $navbar-light-toggler-border-color: rgba($black, .1);
 
 // Pagination
 
-$pagination-padding-y:              .55rem;
-$pagination-padding-x:              1.25rem;
-$pagination-padding-y-sm:           .25rem;
-$pagination-padding-x-sm:           .75rem;
-$pagination-padding-y-lg:           .75rem;
-$pagination-padding-x-lg:           1.5rem;
-$pagination-line-height:            1.25;
+$pagination-padding-y:              $btn-padding-y;
+$pagination-padding-x:              $btn-padding-x-sm;
+$pagination-padding-y-sm:           $btn-padding-y-sm;
+$pagination-padding-x-sm:           $btn-padding-x-xs;
+$pagination-padding-y-lg:           $btn-padding-y-lg;
+$pagination-padding-x-lg:           $btn-padding-x;
+$pagination-line-height:            1.5;
 
-$pagination-color:                  $link-color;
+$pagination-color:                  $gray-800;
 $pagination-bg:                     $white;
-$pagination-border-width:           $border-width;
-$pagination-border-color:           $gray-300;
+$pagination-border-width:           3px;
+$pagination-border-color:           $secondary;
 
-$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+$pagination-focus-box-shadow:       0 0 0 .2rem $input-btn-focus-color;
 $pagination-focus-outline:          0;
 
-$pagination-hover-color:            $link-hover-color;
-$pagination-hover-bg:               $gray-200;
-$pagination-hover-border-color:     $gray-300;
+$pagination-hover-color:            $white;
+$pagination-hover-bg:               $primary;
+$pagination-hover-border-color:     $primary;
 
 $pagination-active-color:           $component-active-color;
 $pagination-active-bg:              $component-active-bg;
@@ -715,11 +716,11 @@ $jumbotron-bg:                      $gray-200;
 
 $card-spacer-y:                     .75rem;
 $card-spacer-x:                     1.25rem;
-$card-border-width:                 $border-width;
+$card-border-width:                 2px;
 $card-border-radius:                $border-radius;
 $card-border-color:                 rgba($black, .125);
 $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width});
-$card-cap-bg:                       rgba($black, .03);
+$card-cap-bg:                       transparent;
 $card-bg:                           $white;
 
 $card-img-overlay-padding:          1.25rem;
@@ -737,9 +738,9 @@ $card-columns-margin:               $card-spacer-y;
 $tooltip-font-size:                 $font-size-sm;
 $tooltip-max-width:                 200px;
 $tooltip-color:                     $white;
-$tooltip-bg:                        $black;
+$tooltip-bg:                        $primary;
 $tooltip-border-radius:             $border-radius;
-$tooltip-opacity:                   .9;
+$tooltip-opacity:                   1;
 $tooltip-padding-y:                 .25rem;
 $tooltip-padding-x:                 .5rem;
 $tooltip-margin:                    0;
@@ -754,13 +755,13 @@ $tooltip-arrow-color:               $tooltip-bg;
 $popover-font-size:                 $font-size-sm;
 $popover-bg:                        $white;
 $popover-max-width:                 276px;
-$popover-border-width:              $border-width;
+$popover-border-width:              0px;
 $popover-border-color:              rgba($black, .2);
 $popover-border-radius:             $border-radius-lg;
-$popover-box-shadow:                0 .25rem .5rem rgba($black, .2);
+$popover-box-shadow:                0 .25rem .5rem rgba($black, .25);
 
-$popover-header-bg:                 darken($popover-bg, 3%);
-$popover-header-color:              $headings-color;
+$popover-header-bg:                 $primary;
+$popover-header-color:              $white;
 $popover-header-padding-y:          .5rem;
 $popover-header-padding-x:          .75rem;
 
@@ -853,7 +854,7 @@ $progress-bar-transition:           width .6s ease;
 
 $list-group-bg:                     $white;
 $list-group-border-color:           rgba($black, .125);
-$list-group-border-width:           $border-width;
+$list-group-border-width:           2px;
 $list-group-border-radius:          $border-radius;
 
 $list-group-item-padding-y:         .75rem;
@@ -892,13 +893,13 @@ $figure-caption-color:              $gray-600;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              .75rem;
-$breadcrumb-padding-x:              1rem;
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
 $breadcrumb-item-padding:           .5rem;
 
 $breadcrumb-margin-bottom:          1rem;
 
-$breadcrumb-bg:                     $gray-200;
+$breadcrumb-bg:                     transparent;
 $breadcrumb-divider-color:          $gray-600;
 $breadcrumb-active-color:           $gray-600;
 $breadcrumb-divider:                quote("/");

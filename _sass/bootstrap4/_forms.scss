@@ -1,0 +1,33 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+//
+// Labels
+//
+
+.control-label,
+.form-control-label,
+.form-group > label {
+  padding-left: 1.25rem;
+  text-transform: uppercase;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  padding-left: 1.25rem;
+}
+
+//
+// Extension of the `.form-inline` with some extra flavor for optimum display.
+
+.form-inline {
+  .btn {
+    @extend .btn-round-xl;
+  }
+}
+
+.custom-select {
+  -webkit-appearance: none;
+}

@@ -1,0 +1,20 @@
+//
+// Button groups
+// --------------------------------------------------
+
+.btn {
+  &.dropdown-toggle {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  &.btn-sm.dropdown-toggle {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  &.btn-lg.dropdown-toggle {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
