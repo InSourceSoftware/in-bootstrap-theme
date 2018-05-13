@@ -9,7 +9,7 @@
 .btn {
   &.btn-icon-left {
     span.icon {
-      margin-right: 1rem;
+      margin-right: .5rem;
       line-height: inherit;
       position: relative;
       bottom: -2px;
@@ -22,7 +22,7 @@
   }
   &.btn-icon-right {
     span.icon {
-      margin-left: 1rem;
+      margin-left: .5rem;
       line-height: inherit;
       position: relative;
       bottom: -2px;
@@ -37,33 +37,19 @@
   &.btn-icon-right,
   &.btn-icon-left {
     &.btn {
-      padding-left: 2.25rem;
-      padding-right: 2.25rem;
       span.icon {
-        //font-size: 1.75rem;
       }
     }
     &.btn-sm {
-      padding-left: 1.85rem;
-      padding-right: 1.85rem;
       span.icon {
-        //font-size: 1.6rem;
-        vertical-align: sub;
-
       }
     }
     &.btn-lg {
-      padding-left: 3rem;
-      padding-right: 3rem;
       span.icon {
-        //font-size: 1.85rem;
       }
     }
     &.btn-xs {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
       span.icon {
-        //font-size: 1.4rem;
       }
     }
   }

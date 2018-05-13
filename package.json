@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "jekyll build",
-    "dist": "cp _site/css/*.css docs/css && cp -R fonts docs",
+    "copy": "cp _site/css/*.css docs/css && cp -R fonts docs",
     "commit": "git add . && git commit -m 'Updated stylesheet'",
+    "dist": "npm run build && npm run copy && npm run commit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
